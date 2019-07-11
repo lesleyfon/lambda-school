@@ -1,0 +1,37 @@
+body{
+    margin: 0;
+}
+.header{
+    width:100%;
+    color: white;
+    background: #a0001e;
+    height: 300px;
+    text-align: center;
+    /* padding: 0 auto; */
+}
+.header p{
+    top: -50px;
+
+}
+
+.main{
+    width: 900px;
+    margin: 0 auto;
+    font-size: 1.5em;
+    clear: both;
+}
+
+form{
+    width: 80%;
+    margin: 0 auto;
+}
+.main input{
+    width:100%;
+    /* margin: 0 auto; */
+    right: 0px;
+    clear: both;
+    height: 25px;
+    margin: 10px 0px;
+    
+
+}

@@ -1,0 +1,71 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>JS IV</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <h1>JS IV - Check your work in the console!</h1>
+  <div class="header">
+    <h1>Welcome to Lambda School.</h1>
+    <p>here we make your web dev dreams come true</p>
+  </div>
+  <div class="main">
+    <div class="info">
+      <div class="student-div">
+        <h5>Are you trying to become a next level generation </h5>
+        <a href="#" id="student-form">Click here</a>
+      </div>
+      <div class="Team-lead-div">
+        <h5>Are you trying to become a term lead and teach others while in schoola and making some extra cash </h5>
+        <a href="#" id="team-lead-form">Click Here</a>
+      </div>
+      <div class="Instructor-div">
+        <h5>Are You a Pro in the field and you are looking to help others get into the field </h5>
+        <a href="#" id="studend-form">Click here</a>
+      </div>
+    </div>
+    <div class="lambda-forms">
+        <form id="schoolForm">
+          
+         </form>
+    </div>
+  </div>
+  <script src="prototype-refactor.js"></script>
+  <script src="lambda-classes.js"></script>
+  <script src="forms.js"></script>
+  <script>
+    let formValues = {}
+    let instructorArray = [];
+    const schoolForm = document.getElementById("schoolForm");
+    schoolForm.addEventListener("submit", function(e){
+      e.preventDefault()
+      formValues.name = document.getElementById("name").value;
+      formValues.age = document.getElementById("age").value;
+      formValues.email = document.getElementById("email").value;
+      formValues.location = document.getElementById("location").value;
+      formValues.specialty = document.getElementById("specialty").value;
+      formValues.favLanguage = document.getElementById("favLanguage").value;
+      formValues.catchPhrase= document.getElementById("catchPhrase").value;
+      console.log(formValues)
+      instructorHandler(formValues)
+    })
+    function instructorHandler(obj){
+      let newInstructor = new Instructor(obj)
+      console.log(newInstructor)
+      instructorArray.push(newInstructor)
+      console.log(instructorArray)
+    }
+
+    
+
+  </script>
+</body>
+
+</html>
